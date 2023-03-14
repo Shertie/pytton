@@ -1,3 +1,5 @@
+import math
+
 # lista = [1,2,3,4]
 #
 # # dodać element na wybrane miejsce
@@ -62,11 +64,78 @@
 #         print('{} - {} = 0'.format(a, liczby[licznik]))
 #         break
 #     licznik += 1
-i = 0
-liczby = [1,2,2,2,2,4,3,2]
-while i < len(liczby):
-    if liczby[i] == 2:
-        liczby.remove(2)
-        print(liczby)
-    else:
-        i+=1
+# i = 0
+# liczby = [1,2,2,2,2,4,3,2]
+# while i < len(liczby):
+#     if liczby[i] == 2:
+#         liczby.remove(2)
+#         print(liczby)
+#     else:
+#         i+=1
+
+#Zadania 1
+print(pow(math.e,10))
+print(math.log1p(5 + (math.sin(8)**2) ** 1/6))
+print(math.trunc(3.55))
+print(math.ceil(4.80))
+
+#Zadanie 2
+a = 'JAKUB'
+b = 'KOSIDOWSKI'
+print(a.capitalize(),b.capitalize())
+
+#Zadanie 3
+song = 'gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang '
+print(song.count('gang'))
+
+#Zadanie 4
+word = 'jakieś losowe słowa z literkami'
+print(word[1],word[-1])
+
+#Zadanie 5
+print(word.split())
+
+#Zadanie 6
+utrzyma = 2.43
+struna = 'słowo'
+szesnastkowe = 0x000214
+print('{:f}'.format(utrzyma),'{:s}'.format(struna),'{:x}'.format(szesnastkowe))
+
+#Zadanie 7
+lista = ['kosz', 'nożna', 'ręczna', 'siata']
+lista.reverse()
+lista.append(['paletki','yoga'])
+print(lista)
+
+#Zadanie 8
+slownik = {'itd':'i tak dalej','etc':'et cetera','PiS':'złodzieje'}
+print(slownik)
+
+#Zadanie 9
+gierki = {'Skyrim':'Bethesda','CS:GO':'Valve','League of Legends':'Riot'}
+print(gierki)
+
+#Zadanie 10
+user = input("Napisz mi jakieś ładne zdanie. PROSZĘ!!!!! \n")
+print(user.count('a'))
+
+#Zadanie 11
+x = int(input('Daj jakąś liczbę byczq '))
+y = int(input('Daj jakąś liczbę byczq '))
+z = int(input('Daj jakąś liczbę byczq '))
+print(max(x,y,z))
+
+#Zadanie 12
+liczby = [3,2.4,744,8.224]
+for i in liczby:
+    print(pow(i,2))
+
+#Zadanie 13
+c = []
+itr = 0
+while itr < 10:
+    k = int(input("liczba jakaś "))
+    itr+=1
+    if k%2 == 0:
+        c.append(k)
+print(c)
