@@ -1,0 +1,106 @@
+import math
+import random
+
+from pip._internal.utils import encoding
+
+#Zestaw 1
+
+#Zadanie 1
+#
+# a = pow(math.log(20, math.e) + math.cos(45) + math.e, 1/3)
+# print(round(a, 2))
+#
+#
+# #Zadanie 2
+# list = [1,3,2,5,8,6,3]
+# lista = [i for i in list if i != min(list)]
+# print(list)
+# print(lista)
+#
+# #Zadanie 3
+# slownik = {1:2 , 1.3:4 , 2:5.2 , 2.4:6.2}
+#
+# # def zadanko(slownik):
+# #     lista = []
+# #     for i in range(slownik):
+# #         if isinstance(slownik.value, float) and isinstance(slownik.key, float):
+# #             lista.append(slownik.value)
+# #             lista.append(slownik.key)
+# #     return lista
+# # print(zadanko(slownik))
+#
+# #Zadanie 4
+# with open('tekst.txt', 'r' , encoding='utf-8') as file:
+#     rf = file.read()
+#     znaki = rf[17:58]
+# itr  =0
+# for i in znaki:
+#     if i == 'c':
+#         itr += 1
+# print(itr)
+# print(znaki)
+#
+#
+# #Zadanie 5
+# try:
+#     a_1 = int(input("Daj liczbę całkowitą i spróbuj inną kurwa: "))
+#     q = int(input("podaj iloraz i chuj: "))
+#     n = int(input("podaj jaki chcesz wyraz spierdolino społeczna: "))
+# except ValueError:
+#     print("Nie umiesz czytać czy jesteś żakusiem?")
+# else:
+#     with open('michal_marudzi.txt', 'w+', encoding='utf-8') as f:
+#         a_n = a_1 * pow(q, n)
+#         f.write(str(a_n))
+
+#Zestaw 2
+
+#Zadanie 1
+a = pow(math.exp(4) - math.log2(34), 1/3)
+print(round(a, 2))
+
+
+#Zadanie 2
+l1 = [2,4,7,4,2,1,7]
+li = [i for i in l1[::3]]
+print(l1)
+print(li)
+
+#Zadanie 3
+def funksja(lista):
+    suma = lista[0] + lista[-1]
+    itr = 0
+    for i in lista:
+        if i > suma:
+            itr += 1
+    return itr, suma
+print(funksja([6,2,4,7,9,0]))
+
+#Zadanie 4
+with open('tekst.txt', 'r', encoding='utf-8') as f:
+    rf = f.read()
+zmienna = rf[49:74]
+it = 0
+for i in zmienna:
+    if i.isupper():
+        it += 1
+print(zmienna)
+print(it)
+
+#Zadanie 5
+try:
+    a = int(input("Daj liczbe całkowitą, która będzie przyprostokątną: "))
+    b = int(input("Daj liczbe całkowitą która będzie przyprostokątną: "))
+    c = int(input("Daj liczbe całkowitą która będzie przeciwprostokątną: "))
+except ValueError:
+    print("Dupa")
+    with open('plik.txt', 'w+', encoding='utf-8') as f:
+        f.write("błont")
+else:
+    if a**2 + b**2 == c**2:
+        pole = a*b / 2
+        with open('plik.txt', 'w+', encoding='utf-8') as f:
+            f.write(str(pole))
+    else:
+        with open('plik.txt', 'w+', encoding='utf-8') as f:
+            f.write('To nie jest trujkont prostokontny')
