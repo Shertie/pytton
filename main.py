@@ -1,141 +1,134 @@
 import math
 
-# lista = [1,2,3,4]
-#
-# # dodać element na wybrane miejsce
-# lista.insert(5,9)
-# print(lista, "dodaję 9 na 5 miejsce")
-#
-# # dodać kilka elementów
-# lista2=[1,2,3]
-# lista.extend(lista2)
-# print(lista, "dodaję 3 elementów na lista")
-#
-# # usunąć element z listy o danej pozycji
-# lista.pop(3)
-# print(lista, "usuwam 3 element z listy o danej pozycji")
-#
-# # usunąć element z listy o danej wartości
-# lista.remove(1)
-# print(lista, "usuwam 1 element z listy o danej wartości")
-#
-# # odwrócić listę
-# lista.reverse()
-# print(lista, "odwracam listę")
-#
-# # posortować listę
-# lista.sort()
-#
-# print(lista, "sortuję listę")
-#
-# slownik = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
-#
-# print('a={},b={}'.format(12,12))
-#
-# a = int(input('a: '))
-# b = int(input('b: '))
-# if a > b:
-#     print('a>b')
-# elif a < b:
-#     print('a<b')
-# else:
-#     print('a=b')
+
+#Zestaw A
 
 
-#for element in zbior:
-    #print(element)
-#else:
-    #print('Nie ma takiego elementu')
+print("Zestaw A")
+#Zadanie 1
 
 
-# for i in range(len(lista)):
-#     print(lista[i])
-# else:
-#     print('Nie ma takiego elementu')
-# licznik = 0
-#
-# # while licznik != len(lista):
-# #     print(lista[licznik])
-# #     licznik += 1
-# liczby = [3,2,5,6,2]
-# a = int(input('a: '))
-# while licznik != len(liczby):
-#     if a - liczby[licznik] == 0:
-#         print('{} - {} = 0'.format(a, liczby[licznik]))
-#         break
-#     licznik += 1
-# i = 0
-# liczby = [1,2,2,2,2,4,3,2]
-# while i < len(liczby):
-#     if liczby[i] == 2:
-#         liczby.remove(2)
-#         print(liczby)
-#     else:
-#         i+=1
+print("zadanie 1")
+try:
+    a = int(input("Podaj liczbę a: "))
+    b = int(input("Podaj liczbę b: "))
+    wynik = a ** 2 + b ** 2 + 2 * a * b
+    with open("zestaw_A.txt", "w") as f:
+        f.write(str(wynik))
+except ValueError:
+    print("Nieprawidłowa wartość ")
+print(wynik)
 
-#Zadania 1
-print(pow(math.e,10))
-print(math.log1p(5 + (math.sin(8)**2) ** 1/6))
-print(math.trunc(3.55))
-print(math.ceil(4.80))
 
 #Zadanie 2
-a = 'JAKUB'
-b = 'KOSIDOWSKI'
-print(a.capitalize(),b.capitalize())
+
+
+print("Zadanie 2")
+lista1 = [1,3,5,6,3]
+lista2 = [2,5,7,4,2]
+def suma(lista1, lista2):
+    lista3 = []
+    for i in range(len(lista1)):
+        element = lista1[i] + lista2[i]
+        lista3.append(element)
+    print(lista3)
+suma(lista1, lista2)
 
 #Zadanie 3
-song = 'gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang gucci gang '
-print(song.count('gang'))
+
+
+print("Zadanie 3")
+tekst = 'lorem ipsum dolor sit amet, consectetur adip eu fugiat nulla facilisis justo eu fugiat nulla facilisis justo eu fugiat nulla facilisis justo eu fugiat nulla facil  is justo eu fugiat nulla fac'
+
+with open('tekst.txt', 'r', encoding='utf8') as f:
+    rf = f.read()
+    x = ''
+    y = 0
+    rf = rf[99:135]
+    for i in rf:
+        if i.isupper():
+            y += 1
+            x += i
+    if y == 0:
+        print("Error 404 Page not found")
+    else:
+        print(x, y)
+
 
 #Zadanie 4
-word = 'jakieś losowe słowa z literkami'
-print(word[1],word[-1])
 
-#Zadanie 5
-print(word.split())
-
-#Zadanie 6
-utrzyma = 2.43
-struna = 'słowo'
-szesnastkowe = 0x000214
-print('{:f}'.format(utrzyma),'{:s}'.format(struna),'{:x}'.format(szesnastkowe))
-
-#Zadanie 7
-lista = ['kosz', 'nożna', 'ręczna', 'siata']
-lista.reverse()
-lista.append(['paletki','yoga'])
+print("Zadanie 4")
+list = [3,6,8,7,4,1,2]
+a = 2
+lista = [x for x in list if x > a]
 print(lista)
 
-#Zadanie 8
-slownik = {'itd':'i tak dalej','etc':'et cetera','PiS':'złodzieje'}
-print(slownik)
 
-#Zadanie 9
-gierki = {'Skyrim':'Bethesda','CS:GO':'Valve','League of Legends':'Riot'}
-print(gierki)
+#Zadanie 5
 
-#Zadanie 10
-user = input("Napisz mi jakieś ładne zdanie. PROSZĘ!!!!! \n")
-print(user.count('a'))
+print("Zadanie 5")
+num = pow(math.e**3 + math.cos(39)**2, 1/5) + pow(2/7, 3) + math.pi
+print(num)
 
-#Zadanie 11
-x = int(input('Daj jakąś liczbę byczq '))
-y = int(input('Daj jakąś liczbę byczq '))
-z = int(input('Daj jakąś liczbę byczq '))
-print(max(x,y,z))
 
-#Zadanie 12
-liczby = [3,2.4,744,8.224]
-for i in liczby:
-    print(pow(i,2))
+#Zestaw B
 
-#Zadanie 13
-c = []
-itr = 0
-while itr < 10:
-    k = int(input("liczba jakaś "))
-    itr+=1
-    if k%2 == 0:
-        c.append(k)
-print(c)
+
+print("Zestaw B")
+#Zadanie 1
+
+print("Zadanie 1")
+with open("tekst.txt", 'r',encoding='utf-8')as f:
+    fr = f.read()
+    fr = fr[70:110]
+    itr = 0
+    for i in fr:
+        if fr.find(i) == 'A':
+            itr += 1
+    if itr == 0:
+        print("Ni ma")
+    else: print(itr)
+
+
+#Zadanie 2
+
+print("zadanie 2")
+l = [1,4,6,3,7.1,8,9.4,6.3]
+l1 = [x for x in l if isinstance(x, float)]
+print(l1, '\n', l)
+
+
+
+#Zadanie 3
+
+
+print("zadanie 3")
+listek = [1,2.4,5.3342]
+def suma(listek):
+    a = listek[0]
+    for i in range(len(listek)):
+        listek.append(a+listek[i])
+    return listek
+
+print(suma(listek))
+
+
+#Zadanie 4
+
+print("Zadanie 4")
+wynik = math.sin(56)**2 + pow((4**2)/25 + math.log(85, 3), 1/4)
+print(round(wynik, 2))
+
+#Zadanie 5
+
+print("Zadanie 5")
+try:
+    n = int(input("Podaj liczbę całkowitą: "))
+    suma = 0
+    for i in range(n):
+        suma += i+1
+    with open("zadanie5.txt", "w") as f:
+        f.write(str(suma))
+except ValueError:
+    print("Złe wartośći byczq ")
+
